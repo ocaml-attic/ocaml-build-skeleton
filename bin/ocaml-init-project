@@ -1,0 +1,13 @@
+#!/bin/sh
+
+FILES="Makefile _tags _vars cmd myocamlbuild.ml"
+SHARE="@SHARE@"
+
+for f in ${FILES}; do
+  if [ -e "${f}" ]; then
+    echo ${f}: already exists. You can get: ${SHARE}/${f}
+  else
+    cp ${SHARE}/${f} ${f}
+    echo ${f}: new.
+  fi
+done
