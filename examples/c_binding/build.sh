@@ -22,3 +22,6 @@ ocamlbuild -clean
 ocamlbuild -classic-display bar.native bar.byte
 ./_build/bar.native
 env CAML_LD_LIBRARY_PATH=${INSTALL_DIR} ./_build/bar.byte
+ocamlbuild -classic-display bardyn.byte bar.cmxs bar.cma
+cd _build
+env CAML_LD_LIBRARY_PATH=${INSTALL_DIR} ./bardyn.byte

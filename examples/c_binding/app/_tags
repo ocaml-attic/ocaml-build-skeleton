@@ -1,1 +1,2 @@
 true: use_foo
+<bardyn.*>: use_dynlink
